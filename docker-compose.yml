@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  demyx_cs:
+    container_name: vs-code
+    image: demyx/code-server
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /:/home/demyx
+    environment:
+      - CODER_WORKDIR=/root/
+      - PASSWORD=€€Mind.Hosting€€
+      - TZ=Africa/Tunis
+      - VIRTUAL_HOST=vs.demo.mind.hosting
+      - LETSENCRYPT_HOST=vs.demo.mind.hosting
+      - LETSENCRYPT_EMAIL=mindengineering.tn@gmail.co
+      - VIRTUAL_PORT=8080
+    user: "0:0"
+    network_mode: bridge
