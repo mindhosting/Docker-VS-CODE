@@ -9,7 +9,7 @@ services:
       - /:/home/demyx
     environment:
       - CODER_WORKDIR=/root/
-      - PASSWORD=€€Mind.Hosting€€
+      - PASSWORD=##
       - TZ=Africa/Tunis
       - VIRTUAL_HOST=vs.demo.mind.hosting
       - LETSENCRYPT_HOST=vs.demo.mind.hosting
